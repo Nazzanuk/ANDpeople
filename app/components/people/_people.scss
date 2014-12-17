@@ -1,0 +1,102 @@
+[ng-controller="peopleCtrl"] {
+
+  .people-list {
+    border: 1px solid $and-grey10;
+    .person {
+      line-height: 40px;
+      height:40px;
+      border-bottom: 1px solid $and-grey10;
+      padding: 0 20px;
+      cursor: pointer;
+
+      &.active {
+        background: $and-grey5;
+        border-left: 3px solid $red;
+        padding-left: 17px;
+      }
+
+      &:hover {
+        background: $and-grey10;
+      }
+    }
+  }
+
+  .person-section {
+    border: 1px solid $and-grey10;
+    border-bottom: none;
+
+    &:last-child {
+      border: 1px solid $and-grey10;
+    }
+
+    .person-section-header {
+      line-height: 40px;
+      height:40px;
+      padding: 0 20px;
+      cursor: pointer;
+
+      &.active {
+        background: $and-grey5;
+        border-left: 3px solid $red;
+        padding-left: 17px;
+      }
+
+      &:hover {
+        background: $and-grey10;
+      }
+    }
+
+    .person-section-content {
+      padding: 20px;
+      //display: none;
+      border-top: 1px solid $and-grey10;
+    }
+  }
+
+  .skill-rating {
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    border-radius: 50px;
+    background: $and-grey5;
+    border: $and-grey10 1px solid;
+    cursor: pointer;
+
+    &.active {
+      background: $dark-red;
+      border: 1px solid $dark-red;
+    }
+
+    &:hover {
+      background: $red;
+      border: 1px solid $red;
+    }
+  }
+
+  td, th {
+    line-height: 30px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+    border: none !important;
+
+    &:last-child {
+      white-space: nowrap;
+    }
+  }
+
+  tr {
+    &:hover {
+      background: $and-grey5;
+    }
+  }
+
+  th {
+    background: $and-grey10;
+  }
+
+  td {
+    border-bottom:1px solid $and-grey10;
+  }
+}

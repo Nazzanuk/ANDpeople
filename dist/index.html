@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="app.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"/>
+
+</head>
+<body ng-app="andpeople">
+
+
+<div class="container-fluid">
+    <div ng-controller="peopleCtrl">
+        <div class="row">
+            <div class="col-sm-3">
+                <h2>
+                    <div class="btn btn-primary pull-right" ng-click="newPerson = true">Add Person &nbsp; <i class="fa fa-user"></i></div>
+                    People
+                </h2>
+
+                <div class="people-list">
+                    <div class="person" ng-class="{active: $index == currentPerson && !newPerson}" ng-click="setPerson($index)" ng-repeat="(key, person) in people track by $index">
+                        {{person.firstName}} {{person.lastName}}
+                        <i class="fa fa-chevron-right pull-right" ng-show="$index == currentPerson"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-9" ng-if="newPerson">
+                <h2>New Person</h2>
+                <form role="form">
+
+                    <div class="form-group" ng-repeat="field in fields track by $index">
+                        <label for="input{{key}}">{{field.title}}</label>
+                        <input ng-disabled="field.disabled" id="input{{key}}" class="form-control" type="text" ng-model="$parent.person[field.key]"/>
+                    </div>
+
+                    <div class="btn btn-primary" ng-click="submit()">Insert &nbsp; <i class="fa fa-check"></i></div>
+                </form>
+            </div>
+            <div class="col-sm-9" ng-if="!newPerson">
+                <h2>{{people[currentPerson].firstName}} {{people[currentPerson].lastName}}</h2>
+                <div class="person-section">
+                    <div class="person-section-header" ng-click="setTab('personal')">
+                        Personal Details
+                        <i class="fa fa-chevron-down pull-right" ng-show="currentTab == 'personal'"></i>
+                        <i class="fa fa-chevron-right pull-right" ng-show="currentTab != 'personal'"></i>
+                    </div>
+                    <div class="person-section-content" ng-show="currentTab == 'personal'">
+                        <form role="form">
+
+                            <div class="form-group" ng-repeat="field in fields track by $index">
+                                <label for="input{{key}}">{{field.title}}</label>
+                                <input ng-disabled="field.disabled" id="input{{key}}" class="form-control" type="text" ng-model="people[currentPerson][field.key]"/>
+                            </div>
+
+                            <div class="btn btn-success" ng-click="save()">Save &nbsp; <i class="fa fa-check"></i></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="person-section">
+                    <div class="person-section-header" ng-click="setTab('skills')">
+                        Skills
+                        <i class="fa fa-chevron-down pull-right" ng-show="currentTab == 'skills'"></i>
+                        <i class="fa fa-chevron-right pull-right" ng-show="currentTab != 'skills'"></i>
+                    </div>
+                    <div class="person-section-content" ng-show="currentTab == 'skills'">
+
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <!--<th>ID</th>-->
+                                <th>Topic</th>
+                                <th>Area</th>
+                                <th>Skill</th>
+                                <th>Product</th>
+                                <!--<th>Weighting</th>-->
+                                <th>Level</th>
+                            </tr>
+                            <tr ng-repeat="skill in skills">
+                                <!--<td>{{skill._id}}</td>-->
+                                <td>{{skill.topic}}</td>
+                                <td>{{skill.area}}</td>
+                                <td>{{skill.skill}}</td>
+                                <td>{{skill.product}}</td>
+                                <!--<td>{{skill.weighting}}</td>-->
+                                <td>
+                                    <div class="skill-rating">0</div>
+                                    <div class="skill-rating">1</div>
+                                    <div class="skill-rating">2</div>
+                                    <div class="skill-rating active">3</div>
+                                    <div class="skill-rating">4</div>
+                                    <div class="skill-rating">5</div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="bower.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+$red: #d93621;
+$dark-red: #ad2b1a;
+$light-red: #e35b4a;
+$and-grey: #1b1e24;
+$and-grey5: lighten(#1b1e24, 5%);
+$and-grey10: lighten(#1b1e24, 10%);
+$and-grey15: lighten(#1b1e24, 15%);
+
+body {
+  background: $and-grey;
+  color: #ffffff;
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+
+  font-weight: 300;
+  padding-top: 30px;
+}
+
+input, textarea, .form-control {
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  border: none;
+
+  background: $and-grey5;
+  color: #ffffff;
+  //border-radius: 0;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background: $and-grey5;
+  color: $and-grey15;
+}
+
+h1, h2, h3 {
+  font-weight: 200;
+  margin:0 0 10px;
+}
+
+p {
+  font-weight: 300;
+  margin:0 0 10px;
+}
+
+.fa {
+  line-height: inherit !important;
+}
+
+.btn-primary {
+  background: $red;
+  border: 1px solid $dark-red;
+
+  &:hover {
+    background: $dark-red;
+    border: 1px solid $dark-red;
+  }
+}
