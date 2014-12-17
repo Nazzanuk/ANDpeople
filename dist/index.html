@@ -87,12 +87,13 @@
                                 <td>{{skill.product}}</td>
                                 <!--<td>{{skill.weighting}}</td>-->
                                 <td>
-                                    <div class="skill-rating">0</div>
-                                    <div class="skill-rating">1</div>
-                                    <div class="skill-rating">2</div>
-                                    <div class="skill-rating active">3</div>
-                                    <div class="skill-rating">4</div>
-                                    <div class="skill-rating">5</div>
+                                    <div ng-repeat="n in skillRange"
+                                         class="skill-rating"
+                                         ng-class="{active: people[currentPerson].skills[skill._id] == n}"
+                                         ng-click="setSkillValue(skill._id, n)"
+                                    >
+                                        {{n}}
+                                    </div>
                                 </td>
                             </tr>
                             </tbody>

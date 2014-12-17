@@ -36,7 +36,8 @@ app.controller('peopleCtrl', function ($scope, $timeout, AjaxService, $q) {
 
     $scope.newPerson = false;
     $scope.currentPerson = 0;
-    $scope.currentTab = 'skills';
+    $scope.currentTab = 'personal';
+    $scope.skillRange = [0, 1, 2, 3, 4, 5];
 
     $scope.person = {};
     $scope.people = [];
@@ -92,6 +93,14 @@ app.controller('peopleCtrl', function ($scope, $timeout, AjaxService, $q) {
 
     };
 
+    $scope.setSkillValue = function (skillID, value) {
+        if ($scope.people[$scope.currentPerson].skills == undefined) {
+            $scope.people[$scope.currentPerson].skills = {};
+        }
+        $scope.people[$scope.currentPerson].skills[skillID] = value;
+        $scope.save();
+    };
+
     $scope.setPerson = function (index) {
         $scope.newPerson = false;
         $scope.currentPerson = index;
@@ -99,7 +108,7 @@ app.controller('peopleCtrl', function ($scope, $timeout, AjaxService, $q) {
 
     $scope.getPeople = function () {
         AjaxService.request('get', '/people').then(function (data) {
-            $scope.people = data;
+            $scope.people = _.sortBy(data, function(o) { return o.firstName; });
         });
     };
 
