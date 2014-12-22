@@ -8007,130 +8007,190 @@ button.close {
 
 /* line 9, ../app/components/global/_global.scss */
 body {
-  background: #1b1e24;
-  color: #ffffff;
-  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  background: #eee;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-  padding-top: 30px;
+  background: url("img/1.jpg");
+  font-size: 13px;
 }
 
-/* line 18, ../app/components/global/_global.scss */
+/* line 20, ../app/components/global/_global.scss */
 input, textarea, .form-control {
-  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   border: none;
-  background: #262a33;
-  color: #ffffff;
+  background: #eee;
 }
 
-/* line 27, ../app/components/global/_global.scss */
+/* line 31, ../app/components/global/_global.scss */
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-  background: #262a33;
-  color: #3c4250;
+  background: #eee;
 }
 
-/* line 32, ../app/components/global/_global.scss */
+@media (min-width: 992px) {
+  /* line 37, ../app/components/global/_global.scss */
+  .container {
+    max-width: 1200px;
+    width: 1200px;
+  }
+}
+
+/* line 45, ../app/components/global/_global.scss */
 h1, h2, h3 {
   font-weight: 200;
   margin: 0 0 10px;
 }
 
-/* line 37, ../app/components/global/_global.scss */
+/* line 50, ../app/components/global/_global.scss */
 p {
   font-weight: 300;
   margin: 0 0 10px;
 }
 
-/* line 42, ../app/components/global/_global.scss */
+/* line 55, ../app/components/global/_global.scss */
 .fa {
   line-height: inherit !important;
 }
 
-/* line 46, ../app/components/global/_global.scss */
+/* line 59, ../app/components/global/_global.scss */
 .btn-primary {
   background: #d93621;
   border: 1px solid #ad2b1a;
 }
-/* line 50, ../app/components/global/_global.scss */
+/* line 63, ../app/components/global/_global.scss */
 .btn-primary:hover {
   background: #ad2b1a;
   border: 1px solid #ad2b1a;
 }
 
+/* line 69, ../app/components/global/_global.scss */
+.box {
+  background: #ffffff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 50px;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+}
+/* line 81, ../app/components/global/_global.scss */
+.box .left-side {
+  background: #2b3039;
+  padding: 20px;
+  color: #ffffff;
+}
+/* line 87, ../app/components/global/_global.scss */
+.box .right-side {
+  background: #ffffff;
+  padding: 20px;
+}
+/* line 91, ../app/components/global/_global.scss */
+.box .right-side table {
+  margin-bottom: 0;
+}
+/* line 95, ../app/components/global/_global.scss */
+.box .right-side .scroll {
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+}
+
+/* line 102, ../app/components/global/_global.scss */
+.scroll {
+  overflow: scroll;
+  margin-right: -1px;
+}
+
 /* line 3, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .people-list {
-  border: 1px solid #313641;
+  border-top: 1px solid #414856;
+  margin: 20px -20px;
 }
-/* line 5, ../app/components/people/_people.scss */
+/* line 6, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .people-list .person {
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #313641;
-  padding: 0 20px;
+  line-height: 20px;
+  height: 60px;
+  border-bottom: 1px solid #414856;
+  padding: 10px 20px;
+  padding-right: 10px;
   cursor: pointer;
+  font-size: 16px;
+  white-space: nowrap;
 }
-/* line 12, ../app/components/people/_people.scss */
+/* line 16, ../app/components/people/_people.scss */
+[ng-controller="peopleCtrl"] .people-list .person i {
+  position: relative;
+  margin-top: 10px;
+}
+/* line 21, ../app/components/people/_people.scss */
+[ng-controller="peopleCtrl"] .people-list .person small {
+  color: #4c5565;
+  font-size: 13px;
+}
+/* line 26, ../app/components/people/_people.scss */
+[ng-controller="peopleCtrl"] .people-list .person:hover {
+  background: #414856;
+}
+/* line 30, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .people-list .person.active {
-  background: #262a33;
+  background: white;
+  color: #2b3039;
   border-left: 3px solid #d93621;
   padding-left: 17px;
 }
-/* line 18, ../app/components/people/_people.scss */
-[ng-controller="peopleCtrl"] .people-list .person:hover {
-  background: #313641;
+/* line 36, ../app/components/people/_people.scss */
+[ng-controller="peopleCtrl"] .people-list .person.active small {
+  color: #ad2b1a;
+  font-size: 13px;
 }
-/* line 24, ../app/components/people/_people.scss */
+/* line 44, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .person-section {
-  border: 1px solid #313641;
+  border-top: 1px solid #eee;
   border-bottom: none;
 }
-/* line 28, ../app/components/people/_people.scss */
-[ng-controller="peopleCtrl"] .person-section:last-child {
-  border: 1px solid #313641;
-}
-/* line 32, ../app/components/people/_people.scss */
+/* line 52, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .person-section .person-section-header {
   line-height: 40px;
   height: 40px;
-  padding: 0 20px;
+  font-size: 16px;
   cursor: pointer;
 }
-/* line 38, ../app/components/people/_people.scss */
+/* line 59, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .person-section .person-section-header.active {
-  background: #262a33;
+  background: #eee;
   border-left: 3px solid #d93621;
   padding-left: 17px;
 }
-/* line 44, ../app/components/people/_people.scss */
-[ng-controller="peopleCtrl"] .person-section .person-section-header:hover {
-  background: #313641;
-}
-/* line 49, ../app/components/people/_people.scss */
+/* line 70, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .person-section .person-section-content {
-  padding: 20px;
-  border-top: 1px solid #313641;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
 }
-/* line 56, ../app/components/people/_people.scss */
+/* line 77, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .skill-rating {
   line-height: 30px;
   text-align: center;
   display: inline-block;
   width: 30px;
   border-radius: 50px;
-  background: #262a33;
-  border: #313641 1px solid;
+  background: #fff;
+  border: #fff 1px solid;
   cursor: pointer;
+  font-weight: bold;
 }
-/* line 66, ../app/components/people/_people.scss */
+/* line 89, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .skill-rating.active {
   background: #ad2b1a;
   border: 1px solid #ad2b1a;
+  color: #ffffff;
 }
-/* line 71, ../app/components/people/_people.scss */
+/* line 95, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .skill-rating:hover {
   background: #d93621;
   border: 1px solid #d93621;
+  color: #ffffff;
 }
-/* line 77, ../app/components/people/_people.scss */
+/* line 102, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] td, [ng-controller="peopleCtrl"] th {
   line-height: 30px !important;
   overflow: hidden;
@@ -8138,19 +8198,11 @@ p {
   padding: 0 5px;
   border: none !important;
 }
-/* line 84, ../app/components/people/_people.scss */
+/* line 109, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] td:last-child, [ng-controller="peopleCtrl"] th:last-child {
   white-space: nowrap;
 }
-/* line 90, ../app/components/people/_people.scss */
+/* line 115, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] tr:hover {
-  background: #262a33;
-}
-/* line 95, ../app/components/people/_people.scss */
-[ng-controller="peopleCtrl"] th {
-  background: #313641;
-}
-/* line 99, ../app/components/people/_people.scss */
-[ng-controller="peopleCtrl"] td {
-  border-bottom: 1px solid #313641;
+  background: #eee;
 }

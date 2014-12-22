@@ -6,7 +6,7 @@ app.controller('peopleCtrl', function ($scope, $timeout, AjaxService, $q) {
 
     $scope.newPerson = false;
     $scope.currentPerson = 0;
-    $scope.currentTab = 'personal';
+    $scope.currentTab = 'skills';
     $scope.skillRange = [0, 1, 2, 3, 4, 5];
 
     $scope.person = {};
@@ -63,7 +63,15 @@ app.controller('peopleCtrl', function ($scope, $timeout, AjaxService, $q) {
 
     };
 
-    $scope.setSkillValue = function (skillID, value) {
+    $scope.leftScrollHeight = function (tab) {
+        return ($(window).height() - 214) + 'px';
+    };
+
+    $scope.skillsScrollHeight = function (tab) {
+        return ($(window).height() - 355) + 'px';
+    };
+
+    $scope.setSkillValue = function ( skillID, value) {
         if ($scope.people[$scope.currentPerson].skills == undefined) {
             $scope.people[$scope.currentPerson].skills = {};
         }

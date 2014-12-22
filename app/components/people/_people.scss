@@ -1,55 +1,76 @@
 [ng-controller="peopleCtrl"] {
 
   .people-list {
-    border: 1px solid $and-grey10;
+    border-top: 1px solid $and-grey10;
+    margin: 20px -20px;
     .person {
-      line-height: 40px;
-      height:40px;
+      line-height: 20px;
+      height:60px;
       border-bottom: 1px solid $and-grey10;
-      padding: 0 20px;
+      padding: 10px 20px;
+      padding-right: 10px;
       cursor: pointer;
+      font-size: 16px;
+      white-space: nowrap;
 
-      &.active {
-        background: $and-grey5;
-        border-left: 3px solid $red;
-        padding-left: 17px;
+      i {
+        position: relative;
+        margin-top: 10px;
+      }
+
+      small {
+        color: $and-grey15;
+        font-size: 13px;
       }
 
       &:hover {
         background: $and-grey10;
+      }
+
+      &.active {
+        background: white;
+        color: $and-grey;
+        border-left: 3px solid $red;
+        padding-left: 17px;
+
+        small {
+          color: $dark-red;
+          font-size: 13px;
+        }
       }
     }
   }
 
   .person-section {
-    border: 1px solid $and-grey10;
+    border-top: 1px solid #eee;
     border-bottom: none;
 
     &:last-child {
-      border: 1px solid $and-grey10;
+      //border: 1px solid $and-grey10;
     }
 
     .person-section-header {
       line-height: 40px;
       height:40px;
-      padding: 0 20px;
+      font-size: 16px;
+      //padding: 0 20px;
       cursor: pointer;
 
       &.active {
-        background: $and-grey5;
+        background: #eee;
         border-left: 3px solid $red;
         padding-left: 17px;
       }
 
       &:hover {
-        background: $and-grey10;
+        //background: $and-grey10;
       }
     }
 
     .person-section-content {
-      padding: 20px;
+      padding: 20px 0;
       //display: none;
-      border-top: 1px solid $and-grey10;
+      border-top: 1px solid #eee;
     }
   }
 
@@ -59,18 +80,22 @@
     display: inline-block;
     width: 30px;
     border-radius: 50px;
-    background: $and-grey5;
-    border: $and-grey10 1px solid;
+    background: #fff;
+    border: #fff 1px solid;
     cursor: pointer;
+    font-weight: bold;
+    //margin: 0 2px;
 
     &.active {
       background: $dark-red;
       border: 1px solid $dark-red;
+      color: #ffffff;
     }
 
     &:hover {
       background: $red;
       border: 1px solid $red;
+      color: #ffffff;
     }
   }
 
@@ -88,15 +113,15 @@
 
   tr {
     &:hover {
-      background: $and-grey5;
+      background: #eee;
     }
   }
 
   th {
-    background: $and-grey10;
+    //background: $and-grey10;
   }
 
   td {
-    border-bottom:1px solid $and-grey10;
+    //border-bottom:1px solid $and-grey10;
   }
 }
