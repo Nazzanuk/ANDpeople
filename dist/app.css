@@ -8010,7 +8010,7 @@ body {
   background: #eee;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-  background: url("img/1.jpg");
+  background: url("img/2.jpg") center;
   font-size: 13px;
 }
 
@@ -8131,42 +8131,45 @@ p {
 [ng-controller="peopleCtrl"] .people-list .person:hover {
   background: #414856;
 }
-/* line 30, ../app/components/people/_people.scss */
+/* line 29, ../app/components/people/_people.scss */
+[ng-controller="peopleCtrl"] .people-list .person:hover small {
+  color: #eee;
+}
+/* line 34, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .people-list .person.active {
   background: white;
   color: #2b3039;
   border-left: 3px solid #d93621;
   padding-left: 17px;
 }
-/* line 36, ../app/components/people/_people.scss */
+/* line 40, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .people-list .person.active small {
   color: #ad2b1a;
-  font-size: 13px;
 }
-/* line 44, ../app/components/people/_people.scss */
+/* line 47, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .person-section {
   border-top: 1px solid #eee;
   border-bottom: none;
 }
-/* line 52, ../app/components/people/_people.scss */
+/* line 55, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .person-section .person-section-header {
   line-height: 40px;
   height: 40px;
   font-size: 16px;
   cursor: pointer;
 }
-/* line 59, ../app/components/people/_people.scss */
+/* line 62, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .person-section .person-section-header.active {
   background: #eee;
   border-left: 3px solid #d93621;
   padding-left: 17px;
 }
-/* line 70, ../app/components/people/_people.scss */
+/* line 73, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .person-section .person-section-content {
   padding: 20px 0;
   border-top: 1px solid #eee;
 }
-/* line 77, ../app/components/people/_people.scss */
+/* line 80, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .skill-rating {
   line-height: 30px;
   text-align: center;
@@ -8178,19 +8181,19 @@ p {
   cursor: pointer;
   font-weight: bold;
 }
-/* line 89, ../app/components/people/_people.scss */
+/* line 92, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .skill-rating.active {
   background: #ad2b1a;
   border: 1px solid #ad2b1a;
   color: #ffffff;
 }
-/* line 95, ../app/components/people/_people.scss */
+/* line 98, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] .skill-rating:hover {
   background: #d93621;
   border: 1px solid #d93621;
   color: #ffffff;
 }
-/* line 102, ../app/components/people/_people.scss */
+/* line 105, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] td, [ng-controller="peopleCtrl"] th {
   line-height: 30px !important;
   overflow: hidden;
@@ -8198,11 +8201,11 @@ p {
   padding: 0 5px;
   border: none !important;
 }
-/* line 109, ../app/components/people/_people.scss */
+/* line 112, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] td:last-child, [ng-controller="peopleCtrl"] th:last-child {
   white-space: nowrap;
 }
-/* line 115, ../app/components/people/_people.scss */
+/* line 118, ../app/components/people/_people.scss */
 [ng-controller="peopleCtrl"] tr:hover {
   background: #eee;
 }

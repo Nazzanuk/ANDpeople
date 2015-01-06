@@ -25,6 +25,10 @@
 
       &:hover {
         background: $and-grey10;
+
+        small {
+          color: #eee;
+        }
       }
 
       &.active {
@@ -35,7 +39,6 @@
 
         small {
           color: $dark-red;
-          font-size: 13px;
         }
       }
     }
